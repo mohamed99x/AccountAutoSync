@@ -1,5 +1,9 @@
 # AccountAutoSync
 "AccountAutoSync" is a background tool designed to synchronize user accounts between a local database and the Windows operating system, with the ability to control and monitor through an icon in the notification area.
+# Developed by
+Developed by [Mohamed Ismail](https://www.instagram.com/mohamedismail_100/)
+
+
 ## Overview
 This tool is designed to run as a background service, periodically adding new users from a local database to the Windows operating system and changing the `Administrator` account's password based on the database entries. It also provides a system tray icon for manual control.
 
