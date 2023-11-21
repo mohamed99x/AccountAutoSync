@@ -33,16 +33,16 @@ def change_admin_password():
         conn = pymysql.connect(host='', user='', password='', db='')
         cursor = conn.cursor()
 
-        cursor.execute("SELECT password FROM users WHERE username = 'pc'")
+        cursor.execute("SELECT password FROM users WHERE username = 'Administrator'")
         result = cursor.fetchone()
         if result:
-            pc_password = result[0]
-            command = f'net user Administrator {pc_password}'
+            Administrator_password = result[0]
+            command = f'net user Administrator {Administrator_password}'
             subprocess.run(command, shell=True)
 
             print("Administrator user's password has been changed.")
         else:
-            print("User 'pc' was not found.")
+            print("User 'Administrator' was not found.")
     except pymysql.MySQLError as e:
         print(f"Failed to connect to the database: {e}")
     finally:
